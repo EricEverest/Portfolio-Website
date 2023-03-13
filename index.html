@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X=UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width. initial-scale=1.0">
+        <title>Eric Portfolio</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://kit.fontawesome.com/ed7c2a578b.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+    <div id="header">
+      <div class="container">
+        <nav>
+            <img src="Images/Name.png" class="name">
+            <ul id="sidemenu">
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <i class="fa-solid fa-circle-xmark" onclick="closemenu()"></i>
+            </ul>
+            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <div class="header-text">
+          <p>HTML // CSS // JAVASCRIPT<br>Certified via codeacademy</p>
+          <h1>Hi, I'm <span>Eric</span><br>from Salem, Indiana</h1>
+        </div>
+      </div>
+    </div>
+    <!---------about-------->
+    <div id="about">
+      <div id="container">
+        <div class="row">
+          <div class="about-col-1">
+            <img src="Images/Me.jpg" alt="">
+          </div>
+          <div class="about-col-2">
+            <h1 class="sub-title">About Me</h1>
+            <p>Born in 1994 I've been located in Salem, IN. for 29 years. <br>
+              I've been pursuing a career in the music industry & even <br>
+              attended Berklee college for audio production in 2016.<br> 
+              I've always considered myself to be computer savvy. <br>
+              The more I learned about computers, the more interested <br>
+              I became. In late 2022 I enrolled myself into CodeAcademy <br>
+              and have quickly became certified for multiple languages. <br>
+              My plan for the future is to continue my education in coding <br>
+              and one day land a job for software development.
+            </p>
+            <div class="tab-titles">
+              <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+              <p class="tab-links" onclick="opentab('experience')">Experience</p>
+              <p class="tab-links" onclick="opentab('education')">Education</p>
+            </div>
+            <div class="tab-contents active-tab" id="skills">
+              <ul>
+                <li><span>HTML</span><br>A standardized system for tagging text files <br> 
+                  to achieve font, color, graphic, and hyperlink <br> 
+                  effects on World Wide Web pages</li>
+                <li><span>CSS</span><br>A style sheet language used for describing <br> 
+                  the presentation of a document written in a <br> 
+                  markup language such as HTML</li>
+                <li><span>JAVASCRIPT</span><br>A dynamic programming language used in <br>
+                  web development, web applications, game <br>
+                  development, & lots more. It allows you to <br>
+                  implement dynamic features on web pages <br>
+                  that cannot be done with only HTML and CSS</li>
+              </ul>
+            </div>
+            <div class="tab-contents" id="experience">
+              <ul>
+                <li><span>Oct. 2022 - Jan. 2023</span><br>HTML, CSS, & JAVASCRIPT certification training at CodeAcademy</li>
+              </ul>
+            </div>
+            <div class="tab-contents" id="education">
+              <ul>
+                <li><span>Oct. 2022 - Jan. 2023</span><br>CodeAcademy HTML, CSS, JAVASCRIPT (online program)</li>
+                <li><span>Current</span><br>CodeAcademy Python (online program)</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!---------------Portfolio----------->
+
+    <div id="portfolio">
+      <div class="containter">
+        <h1 class="sub-title">My Work</h1>
+        <div class="work-list">
+          <div class="work">
+            
+            <div class="layer">
+              <h3>Github Projects</h3>
+              <p>Visit my GitHub account to view my latest projects.</p>
+              <a href="https://github.com/EricEverest?tab=repositories"><i class="fa-solid fa-arrow-up-right-from-square"></i><img src="Images/Git.svg"></a> 
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+<!---------------------Contact------------------->
+
+<div id="contact">
+  <div class="container">
+    <div class="row">
+      <div class="contact-left">
+        <h1 class="sub-title">Contact Me</h1>
+        <p> <i class="fa-sharp fa-solid fa-paper-plane"></i> EricTroutman2012@gmail.com</p>
+        <p> <i class="fa-solid fa-phone"></i> 812-620-9994</p>
+      </div>
+      <div class="social-icons">
+<a href="https://www.facebook.com/EricTroutmanEverest"><i class="fa-brands fa-facebook"></i></a>
+<a href="https://www.instagram.com/eric.everest/"><i class="fa-brands fa-instagram"></i></a>
+<a href="https://twitter.com/eric_everest"><i class="fa-brands fa-twitter"></i></a>
+<a href="https://www.linkedin.com/in/eric-troutman-2bba4b269/"><i class="fa-brands fa-linkedin"></i></a>
+      </div>
+    </div>
+  </div>
+
+
+</div>
+
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname){
+          for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+          }
+          for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+          }
+          event.currentTarget.classList.add("active-link");
+          document.getElementById(tabname).classList.add("active-tab")
+        }
+
+    </script>
+    <script>
+
+     var sidemenu = document.getElementById("sidemenu");
+
+     function openmenu(){
+      sidemenu.style.right = "0";
+     }
+     function closemenu(){
+      sidemenu.style.right = "-200px";
+     }
+
+    </script>
+
+    </body>
+</html>
